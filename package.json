@@ -1,5 +1,5 @@
 {
-  "name": "cannon-es",
+  "name": "@trepidacious/cannon-es",
   "version": "0.20.0",
   "license": "MIT",
   "description": "A lightweight 3D physics engine written in JavaScript.",
