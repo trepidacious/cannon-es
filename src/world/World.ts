@@ -500,6 +500,10 @@ export class World extends EventTarget {
         // Do fixed steps to catch up
         this.internalStep(dt)
         this.accumulator -= dt
+
+        // Increment time
+        this.time += dt
+
         substeps++
         if (performance.now() - t0 > dt * 1000) {
           // The framerate is not interactive anymore.
@@ -520,7 +524,6 @@ export class World extends EventTarget {
         b.previousQuaternion.slerp(b.quaternion, t, b.interpolatedQuaternion)
         b.previousQuaternion.normalize()
       }
-      this.time += timeSinceLastCalled
     }
   }
 
